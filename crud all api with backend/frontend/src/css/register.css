@@ -1,0 +1,39 @@
+.textbar{
+    margin: 10px;
+        border-radius: 5px;
+        height: 31px;
+        width: 500px;
+        border: 1px solid #ccc;
+        padding: 5px;
+}
+
+.btn-login {
+
+    border-radius: 5px;
+    height: 35px;
+    width: 515px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.btn-login-save {
+
+    border-radius: 5px;
+    height: 35px;
+    width: 110px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.btn-login-cancel {
+
+    border-radius: 5px;
+    height: 35px;
+    width: 110px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #ccc;
+    color: white;
+}

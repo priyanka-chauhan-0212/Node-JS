@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.wrapperLogin {
+  background: #f1efe7;
+  z-index: 10000;
+  background-image: url(../assets/mainBG.jpg);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.inner-image {
+  /* background-image: url(../assets/pathLogo.png); */
+  /* background-image: url(../assets/mainBG.jpg); */
+  /* 
+     background-repeat: no-repeat;
+     height: 100vh;
+     width: 100%;
+     z-index: 10;
+    
+    background-position: 118% 59px;
+        height: 100%;
+        max-height: 100%; */
+  height: 100%;
+  min-height: 100vh;
+}
+
+.inner-content {
+  width: 65%;
+  padding: 7% 16% 7% 5%;
+}
+
+.inner-content-form {
+  padding: 80px 70px;
+  background: #ffffff;
+  border-radius: 24px;
+  margin: 50px 0;
+}
+
+.form-input-field {
+  border: 2px solid #e9eaee;
+  border-radius: 31px;
+  padding: 20px 26px;
+  margin-bottom: 24px;
+}
+
+.inner-content-img img {
+  width: 100%;
+  height: 100%;
+}
+
+button.btn.btn-secondary {
+  padding: 10px 20px 10px 68px;
+  border-radius: 14px;
+  background: #4fbdcf !important;
+  box-shadow: 0px 3px 6px #5374ce2c;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.rememberCheckbox .form-check-input:checked {
+  background-color: #4fbdcf;
+  border-color: #4fbdcf;
+}
+
+.form-check {
+  margin-right: 40px;
+}
+
+.form-check small {
+  color: #4fbdcf;
+  margin-left: -24px;
+  font-family: montserrat, monospace;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+svg.button-icon {
+  margin-left: 60px;
+}
+
+.inner-content-form h2 {
+  font-size: 30px;
+  color: #4fbdcf;
+  line-height: 40px;
+  font-weight: 500;
+  margin-bottom: 46px;
+}
+
+form input {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.inner-content-form .invalid-feedback {
+  margin-top: -10px !important;
+}
+
+.submit-area {
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.form-check-label.form-label {
+  font-family: montserrat, monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.inner-bottom-content-img img {
+  margin-bottom: 0px;
+  display: block;
+  width: 30%;
+}
+
+.terms {
+  color: #395474 !important;
+}
+
+.inner-content-form .form-check-input:focus {
+  border-color: #5bbcd0;
+}
+
+.inner-content-form .form-input-field:focus {
+  border-color: #5bbcd0;
+}
+
+.inner-content {
+  height: 100%;
+}
+
+.inner-image {
+  height: 100%;
+}
+
+.register-user {
+  font-size: 15px;
+  color: mediumblue;
+}
+
+@media screen and (max-width: 1920px) {
+  .inner-image {
+    /* background-position: 110% 260px; */
+    height: 100%;
+  }
+
+  .inner-content {
+    width: 65%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1860px) {
+  .inner-image {
+    background-position: 110% 220px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .inner-image {
+    background-position: 120% 120px;
+  }
+
+  .inner-content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .inner-image {
+    background-position: 130% 100px;
+  }
+
+  .inner-content-form {
+    padding: 68px 60px;
+    background: #ffffff;
+    border-radius: 24px;
+    margin: 50px 0;
+  }
+  .inner-content-form h2 {
+    margin-bottom: 36px;
+  }
+
+  .inner-content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-image {
+    background-position: 200% 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .inner-image {
+    background-position: 26% 70px;
+    background-size: cover;
+  }
+
+  .inner-content {
+    width: 80%;
+    padding: 15% 7%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .inner-content {
+    width: 80%;
+    padding: 15% 7%;
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .inner-content {
+    width: 100%;
+  }
+
+  .inner-image {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .inner-content-form {
+    padding: 30px 30px;
+    background: #ffffff;
+    border-radius: 24px;
+    margin: 40px 0;
+  }
+
+  .submit-area {
+    display: block !important;
+    padding-top: 10px;
+    margin-bottom: 26px;
+  }
+
+  .form-check {
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+
+  .inner-content-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .inner-content-form h2 {
+    margin-bottom: 20px;
+  }
+
+  button.btn.btn-secondary {
+    padding: 10px 20px 10px 58px;
+  }
+
+  .form-input-field {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  button.btn.btn-secondary {
+    padding: 10px 20px 10px 40px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  button.btn.btn-secondary {
+    padding: 10px 20px 10px 25px;
+  }
+  svg.button-icon {
+    margin-left: 30px;
+  }
+}

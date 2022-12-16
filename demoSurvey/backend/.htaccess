@@ -1,0 +1,6 @@
+# Redirect traffic to your port 8000
+
+DirectoryIndex
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.\*)?$ http://127.0.0.1:8000/$1 [P,L]

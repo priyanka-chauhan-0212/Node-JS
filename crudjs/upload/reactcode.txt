@@ -1,0 +1,329 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
+import ReactPlayer from 'react-player';
+import { useEffect, useRef } from "react";
+import { useState } from 'react';
+import $ from 'jquery'; 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MDBox from "components/MDBox";
+
+export default function Home() {
+
+  const sliderRef = useRef();
+// Animation code
+gsap.registerPlugin(ScrollTrigger);
+const mainHero = useRef();
+const displayFeatures = useRef();
+const mainHeroElements = gsap.utils.selector(mainHero);
+const highlightSection = useRef();
+const getReports = useRef();
+const videoSection = useRef();
+const monitorVideo = useRef();
+const monitorCopy = useRef();
+const aboutZero = useRef();
+// wait until DOM has been rendered
+useEffect(() => {
+  const MAINHERO = gsap.timeline();
+  MAINHERO.from(
+    mainHeroElements(".hero-title"),
+    {
+      autoAlpha: 0,
+      y: -100,
+    },
+    "-=0.2"
+  );
+  MAINHERO.from(
+    mainHeroElements(".hero-subtitle"),
+    {
+      autoAlpha: 0,
+      y: -100,
+    },
+    "-=0.2"
+  );
+  MAINHERO.to(mainHero.current, {
+    scrollTrigger: {
+      trigger: mainHero.current,
+      start: "top top",
+      pin: true,
+      pinSpacing: false,
+    },
+  });
+
+  // Video Background Section
+  const sentence1 = gsap.utils.selector(highlightSection);
+  sentence1("#highlightText").forEach((sentence) => {
+    // console.log(sentence);
+    const highlightSectionTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: sentence,
+        scrub: true,
+        markers: true,
+        start: "-300em center",
+        end: "200em center",
+        // toggleActions: "restart none none none",
+        // preventOverlaps: true,
+        // end: "500em center",
+      },
+      // defaults: { duration: 1 },
+    });
+    highlightSectionTL
+      .from(sentence, { autoAlpha: 0, duration: 3, ease: sentence.easeIn }, "-=0.2")
+      .to(sentence, { autoAlpha: 0.1, duration: 3, ease: sentence.easeOut }, "-=0.2");
+    // .to("#highlightText", { autoAlpha: 1, duration: 0.01, stagger: 0.75 }, "-=0.1");
+  });
+   // Video Zoom section
+
+    // Video Player
+    const videoSectionElements = gsap.utils.selector(videoSection);
+    ScrollTrigger.create({
+      trigger: monitorVideo.current,
+      start: "top center",
+      end: "bottom center",
+      //  markers: true,
+      onEnter: () => monitorVideo.current.play(),
+      onEnterBack: () => monitorVideo.current.play(),
+      onLeave: () => monitorVideo.current.pause(),
+      onLeaveBack: () => monitorVideo.current.pause(),
+    });
+    const computerTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: videoSection.current,
+        scrub: true,
+        start: "-=50px top",
+        end: "+=500px center",
+        markers: true,
+      },
+    });
+    computerTL.from(videoSectionElements(".video-computer"), { autoAlpha: 0 });
+    const videoSectionTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: videoSection.current,
+        scrub: true,
+        anticipatePin: true,
+        pin: true,
+        pinSpacing: false,
+        start: "-=1% top",
+        end: "center",
+        // markers: true,
+      },
+    });
+    videoSectionTL.from(
+      videoSectionElements(".video-display"),
+      {
+        scale: 2.6,
+        y: 400,
+      },
+      "-=0.2"
+    );
+    const monitorCopyElements = gsap.utils.selector(monitorCopy);
+    const monitorCopyTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: monitorCopy.current,
+        scrub: true,
+        start: "-300em center",
+        end: "-100em center",
+        markers: true,
+      },
+    });
+    monitorCopyTL.from(
+      monitorCopyElements(".monitor-copy-p"),
+      {
+        autoAlpha: 0,
+        y: 100,
+      },
+      "-=0.2"
+    );
+    monitorCopyElements(".monitor-copy-t").forEach((title) => {
+      const MonitorTitlesTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          scrub: true,
+          start: "-300em center",
+          end: "-100em center",
+        },
+      });
+      MonitorTitlesTL.from(title, {
+        autoAlpha: 0,
+        y: 75,
+      });
+    });
+    //  .to(videoSectionElements("#videodisplay"), { scale: 0 }, "-=0.2");
+
+    // Get Reports section
+    const getReportsElements = gsap.utils.selector(getReports);
+    getReportsElements("#getReportsTitle").forEach((title) => {
+      const getReportsTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          scrub: true,
+          start: "-300em center",
+          end: "-100em center",
+        },
+      });
+      getReportsTL.from(title, {
+        autoAlpha: 0,
+        y: 75,
+      });
+    });
+    getReportsElements("#getReportsContent").forEach((content) => {
+      const getReportsTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: content,
+          scrub: true,
+          start: "-200em center",
+          end: "100em center",
+        },
+      });
+      getReportsTL.from(content, {
+        autoAlpha: 0,
+        y: 75,
+      });
+    });
+    getReportsElements("#getReportsImg").forEach((img) => {
+      const getReportsTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: img,
+          scrub: true,
+          start: "-600em center",
+          end: "bottom center",
+        },
+      });
+      getReportsTL.from(img, {
+        y: 175,
+      });
+    });
+  });
+  return(
+    <pageLayout>
+        <MDBox
+        ref={highlightSection}
+        position="relative"
+        minHeight="100vh"
+        height="100%"
+        alignContent="center"
+        m={0}
+        pt={10}
+        pb={10}
+      >
+        <ReactPlayer
+          id="section2-bg"
+          url={section2bg}
+          playing
+          loop
+          muted
+          width="100%"
+          height="100%"
+        />
+
+        <Grid
+          flex
+          container
+          max-width="lg"
+          spacing={4}
+          minHeight="100vh"
+          height="100%"
+          justifyContent="center"
+          sx={{ position: "relative", py: 5, textAlign: "left" }}
+        >
+          <Grid
+            className="Head"
+            flex
+            item
+            xs={11}
+            lg={8}
+            sx={{ position: "relative", py: 5, pb: 0, pt: 0, display: "flex" }}
+          >
+            <MDBox mb={2} mt={2} pl={35} pr={35} sx={{ alignSelf: "center" }}>
+              <MDTypography
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                EnergyX will guide your zero energy project to reduce your
+              </MDTypography>
+              <MDTypography
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                guesswork. We simplified your ability to make your &nbsp;
+              </MDTypography>
+              <MDTypography
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                project efficient. Find your estimated costs Connect
+              </MDTypography>
+              <MDTypography
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                with the approved contractors needed
+              </MDTypography>
+              <MDTypography
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                for your project hire. the contractors you&apos;ve
+              </MDTypography>
+              <MDTypography
+                type="p"
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                approved will track your project in real time.
+              </MDTypography>
+              <MDTypography
+                type="p"
+                id="highlightText"
+                sx={{ visibility: "hidden" }}
+                variant="d2"
+                color="white"
+                fontWeight="bold"
+                paragraph
+              >
+                Let EnergyX crowdfund your project.
+              </MDTypography>
+              <MDBox mt={10} sx={{ alignSelf: "center" }}>
+                <MDButton
+                  variant="text"
+                  size="large"
+                  iconOnly
+                  sx={{ width: "auto", padding: "0px" }}
+                >
+                  Sign up
+                  <Icon>play_circle</Icon>
+                </MDButton>
+              </MDBox>
+            </MDBox>
+          </Grid>
+        </Grid>
+      </MDBox>
+
+    </pageLayout>
+  )
+}

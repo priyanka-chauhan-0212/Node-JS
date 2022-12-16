@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Camera_enable" data-name="Camera enable" transform="translate(-2866 -2071)">
+    <circle id="Ellipse_1809" data-name="Ellipse 1809" cx="12" cy="12" r="12" transform="translate(2866 2071)" fill="#00344a"/>
+    <g id="Camera" transform="translate(2871.543 2077.786)">
+      <path id="Path_13244" data-name="Path 13244" d="M14.922,970.362l-.628,1.569H12.1a1.1,1.1,0,0,0-1.1,1.1v6.276a1.1,1.1,0,0,0,1.1,1.1H22.14a1.1,1.1,0,0,0,1.1-1.1v-6.276a1.1,1.1,0,0,0-1.1-1.1h-2.2l-.628-1.569Zm2.2,2.824a2.981,2.981,0,1,1-2.981,2.981A2.988,2.988,0,0,1,17.119,973.186Zm0,.941a2.04,2.04,0,1,0,2.04,2.04A2.033,2.033,0,0,0,17.119,974.128Z" transform="translate(-11 -970.362)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

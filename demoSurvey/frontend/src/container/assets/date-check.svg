@@ -1,0 +1,12 @@
+<svg id="Select_-deactive" data-name="Select -deactive" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="Ellipse_1464" data-name="Ellipse 1464" fill="#e6edfb" stroke="#d8dce1" stroke-width="2">
+    <circle cx="17" cy="17" r="17" stroke="none"/>
+    <circle cx="17" cy="17" r="16" fill="none"/>
+  </g>
+  <g id="successcheck-green" transform="translate(9.848 11.662)">
+    <path id="successcheck" d="M0,5.271l.013-.013L0,5.246,5.246,0,7.12,1.874,3.735,5.258l7.494,7.495L9.356,14.627Z" transform="translate(0 11.229) rotate(-90)" fill="#779ce6"/>
+  </g>
+  <g id="successcheck-green-2" data-name="successcheck-green" transform="translate(9.848 11.662)">
+    <path id="successcheck-2" data-name="successcheck" d="M0,5.271l.013-.013L0,5.246,5.246,0,7.12,1.874,3.735,5.258l7.494,7.495L9.356,14.627Z" transform="translate(0 11.229) rotate(-90)" fill="#779ce6"/>
+  </g>
+</svg>

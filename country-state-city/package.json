@@ -1,0 +1,17 @@
+{
+  "name": "country-state-city",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "priya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20"
+  }
+}

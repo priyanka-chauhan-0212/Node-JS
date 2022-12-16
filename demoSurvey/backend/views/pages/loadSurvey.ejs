@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+   <head>
+   
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="x-apple-disable-message-reformatting">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+
+     
+      <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet" type="text/css">
+     
+
+
+
+
+
+   </head>
+   
+   <body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #fcf9f8;color: #000000">
+
+<script>
+
+
+let testVAr = "guguu"
+
+       function get_brightness($hex) {
+            $hex = str_replace('#', '', $hex);
+            $c_r = hexdec(substr($hex, 0, 2));
+            $c_g = hexdec(substr($hex, 2, 2));
+            $c_b = hexdec(substr($hex, 4, 2));
+
+            return (($c_r * 299) + ($c_g * 587) + ($c_b * 114)) / 1000;
+         }
+
+         $brandColor = ($surveyDetails -> brand_color ? $surveyDetails -> brand_color : "#ffffff");
+         $buttonStyle = ($surveyDetails -> button_style ? $surveyDetails -> button_style : "fill");
+         $buttonShape = ($surveyDetails -> button_shape ? $surveyDetails -> button_shape : "border-radius");
+         $icon_color = ($surveyDetails -> icon_color ? $surveyDetails -> icon_color : '');
+         $text_color = ($surveyDetails -> text_color ? $surveyDetails -> text_color : '');
+
+         $buttonCss = "";
+         $buttonBg = $btnColor = $btnBorder = "";
+
+         $btnBorder = "border: 1px solid $brandColor;";
+         if ($buttonShape == "sqaure") {
+            $btnBorder.= "border-radius: none;";
+         } else if ($buttonShape == "round") {
+            $btnBorder.= "border-radius: 44px;";
+         } else if ($buttonShape == "border-radius") {
+            $btnBorder.= "border-radius: 5px;";
+         }
+
+         if ($buttonStyle == "fill") {
+            $buttonBg = "background: $brandColor !important;";
+            $btnColor = "color: #ffffff;";
+            $btnBorder.= "border-color: $brandColor;";
+         } else if ($buttonStyle == "bordered") {
+            $buttonBg = "background: #ffffff !important;";
+            $btnColor = "color: $brandColor;";
+         }
+         if (get_brightness($brandColor) > 130) {
+            $btnColor = "color: #000000;";
+            $btnBorder.= "border-color: #000000;";
+         }
+
+</script>
+
+
+
+  <div>
+
+   <h5>hello test page for <%= testVAr %>
+   </h5>
+  </div>
+   
+   </body>
+</html>

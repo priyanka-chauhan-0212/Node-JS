@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+.word text {
+  cursor: pointer;
+}
+
+thead th {
+  padding-right: 50px;
+}
+
+.react-dataTable .rdt_TableBody .rdt_TableRow .rdt_TableCell {
+  height: 100% !important;
+}
+
+@media print {
+  html,
+  body {
+    height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    /* color: black !important; */
+  }
+}
+
+div#myChart12-license-text,
+div#drillMap-license-text {
+  display: none !important;
+}

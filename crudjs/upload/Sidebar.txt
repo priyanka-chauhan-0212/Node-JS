@@ -1,0 +1,41 @@
+// click outside to close menu
+
+const $menu = $('.main-menu')
+
+const onMouseUp = e => {
+ if (!$menu.is(e.target) // If the target of the click isn't the container...
+   && $menu.has(e.target).length === 0) // ... or a descendant of the container.
+   {
+     $menu.removeClass('is-active')
+  }
+}
+
+$('#toggle-menu').on('click', () => {
+  $menu.toggleClass('is-active').promise().done(() => {
+    if ($menu.hasClass('is-active')) {
+      $(document).on('mouseup', onMouseUp) // Only listen for mouseup when menu is active...
+    } else {
+      $(document).off('mouseup', onMouseUp) // else remove listener.
+    }
+  })
+})
+
+//Header menu add active class
+$(function() {
+    var $nav = $('.main-menu .nav a').click(function() {
+        $nav.removeClass('active');
+        $(this).addClass('active');
+    });
+});
+
+$(document).mouseup(function (e) {
+    var container = $('.main-menu');
+    if (!container.is(e.target) &&
+        container.has(e.target).length === 0) {
+   
+        $('.main-menu').css("display", "none");
+    }
+    else{      
+
+    }
+});
